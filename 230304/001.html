@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>박스 꾸미기</title>
+    <style>
+      div {
+        width: 100px;
+        height: 48px;
+        line-height: 38px;
+        text-align: center;
+        font-weight: bold;
+        background-color: #fff;
+        /* border까지의 사이즈를 의미함 */
+        box-sizing: border-box;
+      }
+      div ~ div {
+        margin-top: 20px;
+      }
+      .one {
+        color: #fff;
+        background-color: #343f50;
+        box-shadow: inset 2px 2px #4a5568;
+        border: 2px solid black;
+      }
+      .two {
+        height: 60px;
+        background: #343f50;
+        box-shadow: inset 6px 6px #4a5568;
+        border: 6px solid #000;
+      }
+      .three {
+        color: #fff;
+        border-radius: 25px;
+        background: linear-gradient(
+          90deg,
+          rgba(130, 80, 246),
+          rgba(67, 102, 243) 50%
+        );
+        border: 4.5px dashed rgba(230, 214, 255);
+        background-clip: padding-box;
+      }
+      .four {
+        border: 1px solid #ddd;
+        border-radius: 0 24px 24px 24px;
+        box-shadow: 10px 10px 10px 0 rgba(0, 0, 0, 0.2);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="one">Hello✋</div>
+    <div class="two"></div>
+    <div class="three">Hello✋</div>
+    <div class="four">Hello✋</div>
+  </body>
+</html>
