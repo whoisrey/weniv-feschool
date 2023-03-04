@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>햄버거 메뉴</title>
+    <style>
+      button {
+        background: none;
+        border: 0;
+      }
+      .a11y-hidden {
+        clip: rect(1px, 1px, 1px, 1px);
+        clip-path: inset(50%);
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+      }
+
+      /* 전체 메뉴 버튼 */
+      .btn-allmenu {
+        width: 4.8rem;
+        height: 4.8rem;
+        overflow: hidden;
+        padding: 1.2rem;
+      }
+
+      .btn-allmenu .line {
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 100%;
+        transform: rotate(0);
+        transition: transform 0.3s;
+      }
+      .btn-allmenu .line span {
+        display: inline-block;
+        background: #000;
+        width: 100%;
+        height: 2px;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: all 0.3s;
+      }
+      .btn-allmenu .line span:nth-child(1) {
+        top: 15%;
+      }
+      .btn-allmenu .line span:nth-child(2) {
+        top: 50%;
+        opacity: 1;
+      }
+      .btn-allmenu .line span:nth-child(3) {
+        top: 85%;
+      }
+
+      /* 전체 메뉴 버튼:hover, active */
+      .btn-allmenu:hover .line {
+        transform: rotate(90deg);
+      }
+      .btn-allmenu:active .line {
+        transform: rotate(-45deg);
+      }
+      .btn-allmenu:hover .line span:nth-child(1),
+      .btn-allmenu:active .line span:nth-child(1) {
+        top: 50%;
+        left: 0;
+        margin-top: -1px;
+        transform: rotate(90deg) translate(0%, 0%);
+      }
+      .btn-allmenu:hover .line span:nth-child(2),
+      .btn-allmenu:active .line span:nth-child(2) {
+        opacity: 0;
+      }
+      .btn-allmenu:hover .line span:nth-child(3),
+      .btn-allmenu:active .line span:nth-child(3) {
+        top: 50%;
+        transform: rotate(-360deg) translate(-50%, -50%);
+      }
+    </style>
+  </head>
+  <body>
+    <button class="btn-allmenu" type="button">
+      <span class="a11y-hidden">전체 메뉴 열기</span>
+      <span class="line">
+        <span></span>
+        <span></span>
+        <span></span>
+      </span>
+    </button>
+  </body>
+</html>
