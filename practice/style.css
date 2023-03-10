@@ -2,4 +2,6 @@ section {
 	color: red;
 	border: 5px solid pink;
 }
-h1 { color: unset;}
+h1 { 
+  color: unset;
+}
