@@ -1,0 +1,43 @@
+h1,
+p {
+  margin: initial;
+}
+
+img {
+  vertical-align: top;
+}
+
+.wrapper {
+  width: 300px;
+  margin: auto;
+}
+
+body {
+  background-image: url(/images/bg.png);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.card {
+}
+.card-cover {
+}
+
+.card-contents {
+  text-align: left;
+  color: white;
+  background-image: url(/images/green.png);
+  background-repeat: repeat-x;
+  background-color: #8b5a36;
+  border-radius: 10px 10px 30px 30px;
+  border-bottom: 10px solid #4a260b;
+  padding: 64px 20px 40px 20px;
+}
+
+.card-contents h1 {
+  margin-bottom: 10px;
+}
+
+.card-contents p {
+  color: antiquewhite;
+}
