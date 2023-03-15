@@ -41,3 +41,10 @@ body {
 .card-contents p {
   color: antiquewhite;
 }
+
+@media (max-width: 700px) {
+  body {
+    background-image: none;
+    background-color: teal;
+  }
+}
