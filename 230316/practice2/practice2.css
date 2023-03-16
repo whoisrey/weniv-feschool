@@ -1,0 +1,60 @@
+h1,
+p {
+  margin: initial;
+  padding: initial;
+}
+img {
+  vertical-align: top;
+}
+body {
+  background-image: url(/images/bg.png);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.wrapper {
+  width: 300px;
+  margin: auto;
+}
+.card {
+}
+.card-cover {
+  display: block;
+  margin: auto;
+}
+.contents {
+  background-image: url(/images/green.png);
+  background-repeat: repeat-x;
+  background-color: #8b5a36;
+  color: white;
+  border-radius: 0px 0px 30px 30px;
+  padding: 64px 20px 34px 20px;
+  border-bottom: 10px solid #4a260b;
+  height: 200px;
+}
+.contents h1 {
+  margin-bottom: 10px;
+}
+.contents p {
+  color: antiquewhite;
+  /* -webkit-box : 비표준 속성 */
+  display: -webkit-box;
+  -webkit-line-clamp: 7;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* 말줄임표 뒤의 글자를 가려주기
+.contents p {
+  overflow: hidden;
+  line-height: 1.2em;
+  max-height: 3.6em;
+}
+ .contents p::before {
+  content: "...";
+  position: absolute;
+  right: 0;
+  bottom: 0; 
+}*/
