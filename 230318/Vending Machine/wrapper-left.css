@@ -1,36 +1,45 @@
-.wrapper-left {
-  float: left;
-  width: 360px;
-  background-color: white;
-}
-
 .container-left {
-  margin: 30px 25px;
+  box-sizing: border-box;
+  padding: 15px 27px;
+  height: 545px;
 }
 
+/* 콜라 종류 */
 .drinks {
   display: grid;
   width: auto;
   grid-template-areas:
     "a b c"
     "d e f";
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 12px;
   margin-bottom: 20px;
   font-size: 12px;
 }
 .drinks .items {
   display: flex;
+  width: 94px;
+  height: 130px;
+  box-sizing: border-box;
   flex-direction: column;
-  padding: 40px 50px;
-  border: 2px solid #b5b5b6;
+  box-shadow: 0 0 3px rgba(40, 39, 39, 0.5);
+  border: 1px solid #d2d2d3;
   border-radius: 15px;
-  box-shadow: 0 0 1px #b5b5b6;
-
   padding: 10px;
-  /* width: 94px; */
-  /* height: 130px; */
   text-align: center;
-  gap: 10px;
+  gap: 3px;
+  position: relative;
+}
+.drinks .items:nth-child(2):before {
+  content: "";
+  width: 94px;
+  height: 130px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 15px;
+  background-image: url(/img/sold-out.svg);
+  opacity: 0.6;
 }
 .drinks .items img {
   margin: 0 auto;
@@ -44,7 +53,8 @@
   margin-bottom: 0;
 }
 
-.grid {
+/* 자판기 버튼 및 금액 표시 창 */
+.machine {
   display: grid;
   grid-template-areas:
     "g i"
@@ -55,13 +65,9 @@
   gap: 10px;
   font-size: 14px;
 }
-/* .g::before {
-  content: "";
-  display: inline-block;
-  vertical-align: middle;
-  height: 100%;
-} */
-.g {
+
+/* 잔액 */
+.balance {
   grid-area: g;
   padding: 10px;
   background-color: #eae8fe;
@@ -71,72 +77,80 @@
   align-items: center;
 }
 
-.h {
+/* 입금액 */
+.deposit {
   grid-area: h;
   border: 1px solid #b5b5b6;
   border-radius: 5px;
 }
-input::placeholder {
+.deposit input::placeholder {
   padding: 5px;
   color: #b5b5b6;
 }
-.i,
-.j {
+
+/* 거스름돈 반환, 입금 */
+.change,
+.insert-cash {
   display: flex;
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
 }
-.i {
+
+/* 거스름돈 반환버튼 */
+.change {
   grid-area: i;
 }
-.j {
+
+/* 입금버튼 */
+.insert-cash {
   grid-area: j;
 }
-.i,
-.j {
-  border: 2px solid #b5b5b6;
-  box-shadow: 0 0 1px #b5b5b6;
+.change,
+.insert-cash {
+  box-shadow: 0 0 3px rgba(40, 39, 39, 0.5);
+  border: 1px solid #d2d2d3;
   border-radius: 5px;
   text-align: center;
 }
 
-.k {
+/* 구입한 목록들 */
+.list {
   grid-area: k;
   background-color: #eae8fe;
-  overflow: scroll;
+  overflow-y: scroll;
   border: 1px solid #b5b5b6;
   border-radius: 5px;
 }
-.k ul {
+.list ul {
   padding: 0;
-  width: 100%;
 }
-.k ul li {
+.list ul li {
   display: flex;
-
   height: 35px;
   box-shadow: 0 0 1px #b5b5b6;
   border-radius: 5px;
   background-color: white;
-  padding: 10px;
+  padding: 5px;
+  margin: 10px;
 }
-.k ul li img {
+.list ul li img {
   width: 18px;
-  height: 30px;
+  height: 32px;
 }
-.k::-webkit-scrollbar {
+.list::-webkit-scrollbar {
   width: 6px;
   background-color: transparent;
 }
-.k::-webkit-scrollbar-thumb {
+.list::-webkit-scrollbar-thumb {
   background-color: white;
   border-radius: 8px;
 }
-.k p:first-child {
-  font-size: 5px;
+.list ul li p {
+  margin-left: 10px;
+  font-size: 10px;
 }
-.k p:last-child {
+.list p:last-child {
   border: 2px solid #b5b5b6;
   border-radius: 5px;
   margin: 0 0 0 auto;
@@ -148,7 +162,8 @@ input::placeholder {
   line-height: 30px;
 }
 
-.l {
+/* 획득 버튼 */
+.enter-key {
   grid-area: l;
   color: white;
   background-color: #6327fe;
