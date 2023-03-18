@@ -1,28 +1,16 @@
-.wrapper-right {
-  background-color: #eae8fe;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 50px;
-}
-
-.wrapper-right {
-  float: right;
-  width: 360px;
-}
-
 .container-right-top,
 .container-right-bottom {
   width: 360px;
   box-sizing: border-box;
-}
-.container-right-top {
   background-color: white;
+}
+
+/* 소지금 */
+.container-right-top {
   height: 50px;
 }
 
-.m {
-  /* padding: 10px; */
+.container-right-top .available {
   background-color: #eae8fe;
   border-radius: 5px;
   display: flex;
@@ -35,45 +23,63 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.m p {
+.container-right-top .available p {
   padding: 10px;
 }
 
+/* 획득한 음료 */
 .container-right-bottom {
-  background-color: white;
   height: 474px;
 }
-.wrapper-right h2 {
+.container-right-bottom h2 {
+  margin-top: 30px;
+  font-size: 15px;
   text-align: center;
 }
-.n {
+.container-right-bottom p {
+  text-align: end;
+  font-size: 15px;
+  margin-top: 8px;
+  margin-right: 29px;
+}
+.container-right-bottom .cola-list {
   background-color: #eae8fe;
   border: 1px solid #b5b5b6;
   border-radius: 5px;
-  width: 306px;
-  height: 364px;
-  margin: 0 auto;
-  display: flex;
-}
-.n img {
-}
-.n ul {
-  padding: 5px;
+  width: 300px;
+  height: 360px;
   margin: 0 auto;
 }
-.n li {
-  padding: 5px;
+.container-right-bottom .cola-list ul {
+  padding: 0;
+}
+.container-right-bottom .cola-list ul li {
   display: flex;
-  background-color: white;
+  height: 35px;
+  box-shadow: 0 0 1px #b5b5b6;
   border-radius: 5px;
-  width: 270px;
+  background-color: white;
+  padding: 5px;
   margin: 10px;
 }
-.n p {
-  /* align-items: center; */
+.container-right-bottom .cola-list ul li img {
+  width: 18px;
+  height: 32px;
 }
 
-.n p:last-child {
+.container-right-bottom .cola-list ul li p {
+  margin-left: 10px;
+  font-size: 10px;
+  margin-bottom: auto;
+}
+.container-right-bottom .cola-list p:last-child {
   border: 2px solid #b5b5b6;
-  margin-left: auto;
+  border-radius: 5px;
+  margin: 0 0 0 auto;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 30px;
 }
