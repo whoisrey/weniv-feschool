@@ -1,0 +1,157 @@
+.wrapper-left {
+  float: left;
+  width: 360px;
+  background-color: white;
+}
+
+.container-left {
+  margin: 30px 25px;
+}
+
+.drinks {
+  display: grid;
+  width: auto;
+  grid-template-areas:
+    "a b c"
+    "d e f";
+  gap: 12px;
+  margin-bottom: 20px;
+  font-size: 12px;
+}
+.drinks .items {
+  display: flex;
+  flex-direction: column;
+  padding: 40px 50px;
+  border: 2px solid #b5b5b6;
+  border-radius: 15px;
+  box-shadow: 0 0 1px #b5b5b6;
+
+  padding: 10px;
+  /* width: 94px; */
+  /* height: 130px; */
+  text-align: center;
+  gap: 10px;
+}
+.drinks .items img {
+  margin: 0 auto;
+}
+.drinks .items button {
+  color: white;
+  background-color: #6327fe;
+  padding: 5px;
+  border: none;
+  border-radius: 25px;
+  margin-bottom: 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-areas:
+    "g i"
+    "h j"
+    "k l";
+  grid-template-columns: 200px 94px;
+  grid-template-rows: 32px 32px 106px;
+  gap: 10px;
+  font-size: 14px;
+}
+/* .g::before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+} */
+.g {
+  grid-area: g;
+  padding: 10px;
+  background-color: #eae8fe;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.h {
+  grid-area: h;
+  border: 1px solid #b5b5b6;
+  border-radius: 5px;
+}
+input::placeholder {
+  padding: 5px;
+  color: #b5b5b6;
+}
+.i,
+.j {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+.i {
+  grid-area: i;
+}
+.j {
+  grid-area: j;
+}
+.i,
+.j {
+  border: 2px solid #b5b5b6;
+  box-shadow: 0 0 1px #b5b5b6;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.k {
+  grid-area: k;
+  background-color: #eae8fe;
+  overflow: scroll;
+  border: 1px solid #b5b5b6;
+  border-radius: 5px;
+}
+.k ul {
+  padding: 0;
+  width: 100%;
+}
+.k ul li {
+  display: flex;
+
+  height: 35px;
+  box-shadow: 0 0 1px #b5b5b6;
+  border-radius: 5px;
+  background-color: white;
+  padding: 10px;
+}
+.k ul li img {
+  width: 18px;
+  height: 30px;
+}
+.k::-webkit-scrollbar {
+  width: 6px;
+  background-color: transparent;
+}
+.k::-webkit-scrollbar-thumb {
+  background-color: white;
+  border-radius: 8px;
+}
+.k p:first-child {
+  font-size: 5px;
+}
+.k p:last-child {
+  border: 2px solid #b5b5b6;
+  border-radius: 5px;
+  margin: 0 0 0 auto;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 30px;
+}
+
+.l {
+  grid-area: l;
+  color: white;
+  background-color: #6327fe;
+  border: none;
+  border-radius: 5px;
+}

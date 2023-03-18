@@ -1,0 +1,55 @@
+/* reset */
+.a11y-hidden {
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+}
+
+body,
+h1,
+header,
+section {
+  margin: initial;
+  padding: initial;
+}
+input,
+a {
+  text-decoration: none;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+button {
+  background-color: transparent;
+}
+/* layout */
+body {
+  background-color: #eae8fe;
+}
+header {
+  width: 400px;
+  margin: 0 auto;
+  margin-bottom: 80px;
+}
+.wrapper {
+  width: 750px;
+  margin: 0 auto;
+}
+.wrapper-left {
+  float: left;
+  width: 360px;
+  background-color: white;
+}
+.wrapper-right {
+  float: right;
+  width: 360px;
+  background-color: white;
+}
