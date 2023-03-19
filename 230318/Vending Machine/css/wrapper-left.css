@@ -84,7 +84,6 @@
   border-radius: 5px;
 }
 .deposit input::placeholder {
-  padding: 5px;
   color: #b5b5b6;
 }
 
@@ -138,14 +137,6 @@
   width: 18px;
   height: 32px;
 }
-.list::-webkit-scrollbar {
-  width: 6px;
-  background-color: transparent;
-}
-.list::-webkit-scrollbar-thumb {
-  background-color: white;
-  border-radius: 8px;
-}
 .list ul li p {
   margin-left: 10px;
   font-size: 10px;
@@ -160,6 +151,15 @@
   font-weight: bold;
   font-size: 17px;
   line-height: 30px;
+}
+
+/* 스크롤 바 */
+.list::-webkit-scrollbar {
+  width: 6px;
+}
+.list::-webkit-scrollbar-thumb {
+  background-color: white;
+  border-radius: 8px;
 }
 
 /* 획득 버튼 */
