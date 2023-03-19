@@ -1,0 +1,76 @@
+.a11y-hidden {
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+}
+
+body {
+  margin: 0;
+  background-color: #ddd;
+}
+footer {
+  text-align: center;
+}
+
+.header {
+  height: 300px;
+  background-image: url(images/cover.png);
+  background-position: center;
+  overflow: hidden;
+  margin-bottom: -80px;
+}
+
+.header:hover {
+  filter: invert(100%);
+  height: 500px;
+}
+
+.contents {
+  background-color: white;
+  width: 860px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 50px;
+}
+.contents h1,
+.contents p {
+  margin: 50px;
+}
+
+.box-wrapper {
+  color: white;
+  overflow: hidden;
+  width: 960px;
+  margin: 50px auto;
+}
+
+.box {
+  width: 60px;
+  height: 60px;
+  background-color: black;
+  margin: 5px;
+  float: left;
+  text-align: center;
+  line-height: 60px;
+  font-family: "arial";
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.map {
+  background-color: rgb(184, 0, 0);
+  padding: 50px;
+  color: white;
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.map:hover {
+  margin: 40px -100px;
+  box-shadow: 0 0 100px rgb(0 0 0 / 0.4);
+}

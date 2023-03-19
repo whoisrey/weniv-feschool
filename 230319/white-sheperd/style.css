@@ -1,0 +1,64 @@
+h1,
+p {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: #ddd;
+}
+
+.pokemon {
+  border-radius: 5px;
+  background-color: rgb(52, 50, 50);
+  width: 500px;
+  text-align: center;
+  border-right: 2px solid #ccc;
+  border-bottom: 2px solid #ccc;
+  border-radius: 25px;
+  margin: 300px auto;
+}
+
+.pokemon img:hover {
+  margin-top: -300px;
+}
+
+.pokemon h1 {
+  color: #ccc;
+  border-bottom: 5px solid #ccc;
+  width: 250px;
+  margin: 0 auto 20px;
+}
+
+.pokemon p {
+  color: #ddd;
+  padding: 20px 20px 40px;
+}
+
+.icons {
+  background-color: #ccc;
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.icons a {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  text-indent: -9999px;
+  background-image: url(images/icon-sprite.png);
+}
+
+.icons a.twitter {
+  background-position: left top;
+}
+.icons a.facebook {
+  background-position: center top;
+}
+.icons a.pinterest {
+  background-position: right top;
+}
+
+.icons a:hover {
+  background-position-y: bottom;
+}
