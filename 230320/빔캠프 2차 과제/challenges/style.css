@@ -1,0 +1,164 @@
+:root {
+  font-family: "Montserrat", sans-serif;
+
+  /* font-weight: 500;
+  font-weight: 700; */
+}
+/* reset */
+body {
+  margin: 0;
+}
+h1,
+p,
+h2 {
+  margin: 0;
+  padding: initial;
+  text-decoration: none;
+}
+body {
+  background-color: #673399;
+}
+
+ul,
+li,
+p,
+div {
+  list-style: none;
+}
+.a11y-hidden {
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+}
+
+/* arrange-center */
+
+.wrapper {
+  width: 1080px;
+  margin: 100px auto;
+}
+
+/* layout */
+header {
+  display: flex;
+  color: #eee;
+  font-size: 40px;
+  margin-bottom: 100px;
+}
+
+.title {
+  flex-basis: 26%;
+}
+.title strong {
+  font-weight: lighter;
+  box-shadow: inset 0px -0.5em 0 0 orangered;
+}
+header .text::before {
+  content: "";
+  display: block;
+  background-color: #bd8fe8;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100px;
+  height: 2px;
+}
+
+.text {
+  position: relative;
+  font-size: 14px;
+  color: #bd8fe8;
+  padding: 24px;
+  padding-left: 124px;
+  text-align: left;
+  line-height: 24px;
+}
+
+section {
+  box-shadow: 0 0 10px red;
+  margin-bottom: 24px;
+  display: flex;
+  background-color: white;
+}
+
+/* Take a rest 관리 */
+
+.img {
+  text-align: center;
+  color: #fff;
+  flex-basis: 26%;
+  position: relative;
+  display: flex;
+}
+.list {
+  padding: 24px;
+  background-color: white;
+  font-size: 14px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 0 10px red;
+}
+.a .img img,
+.b .img img,
+.c .img img {
+  width: 100%;
+}
+.a .img p,
+.b .img p,
+.c .img p {
+  position: absolute;
+  font-size: 30px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.a .list p {
+  font-size: 18px;
+  font-weight: bold;
+  color: #673399;
+}
+
+/* list 관리 */
+
+.b {
+  flex-direction: row-reverse;
+}
+
+.list p {
+  font-size: 18px;
+  font-weight: bold;
+  color: #673399;
+  /* margin-bottom: 32px; */
+}
+.a.list.real-list ul {
+  display: flex;
+  /* flex-direction: column; */
+  /* justify-content: space-between; */
+}
+.list ul {
+  margin: 0;
+  padding-left: 26px;
+}
+.list ul li {
+  position: relative;
+  padding-left: 0;
+}
+
+.list li::before {
+  content: "";
+  background-color: #bd8fe8;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: -3.5%;
+  transform: translateY(-50%);
+}
