@@ -3,6 +3,9 @@
   /* font-weight: 500;
   font-weight: 700; */
 }
+
+/* to hide h1 tag for sth */
+
 .a11y-hidden {
   clip: rect(1px, 1px, 1px, 1px);
   clip-path: inset(50%);
@@ -31,104 +34,122 @@ li {
 
 /* aligned center */
 .wrapper {
-  width: 1080px;
+  max-width: 1080px;
   margin: 100px auto;
-  box-shadow: 0 0 10px green;
 }
 
 /* layout */
 .header {
   display: flex;
-  border: 1px solid green;
+  margin-bottom: 100px;
+  transition: 2s all;
+}
+
+/* hover effect for header */
+.header:hover {
+  background: transparent;
+  box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 0.5),
+    -4px -4px 6px 0 rgba(116, 125, 136, 0.2),
+    inset -4px -4px 6px 0 rgba(255, 255, 255, 0.5),
+    inset 4px 4px 6px 0 rgba(116, 125, 136, 0.3);
+  color: #fff;
+}
+.haeder:hover:after {
+  -webkit-transform: scale(2) rotate(180deg);
+  transform: scale(2) rotate(180deg);
+  box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 0.5),
+    -4px -4px 6px 0 rgba(116, 125, 136, 0.2),
+    inset -4px -4px 6px 0 rgba(255, 255, 255, 0.5),
+    inset 4px 4px 6px 0 rgba(116, 125, 136, 0.3);
 }
 
 .header .title {
   flex-basis: 26%;
   flex-shrink: 0;
-  box-shadow: 0 0 10px green;
+  margin-top: -10px;
 }
 .header .text {
   position: relative;
+  text-align: left;
+  font-size: 14px;
+  line-height: 24px;
   padding: 24px;
   padding-left: 124px;
-  text-align: left;
-  line-height: 24px;
-  box-shadow: 0 0 10px green;
+  margin-top: -10px;
 }
 
-.ways {
-  margin-bottom: 24px;
-  display: flex;
-  box-shadow: 0 0 10px green;
-}
-.second {
+/* main */
+/* Significant */
+.main .second {
   flex-direction: row-reverse;
 }
+.main .third {
+  margin-bottom: 0;
+}
 
-.ways .img {
+.main .ways {
+  display: flex;
+  margin-bottom: 24px;
+}
+
+/* hover effects for the ways of main */
+.main .ways:hover {
+  box-shadow: 0 0 100px #bd8fe8;
+}
+
+.main .ways .img {
   flex-basis: 26%;
   position: relative;
   display: flex;
-  box-shadow: 0 0 10px green;
-  text-align: center;
 }
-.ways .img img {
+.main .ways .img img {
   width: 100%;
-  box-shadow: 0 0 10px green;
 }
-.ways .img p {
+.main .ways .img p {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  box-shadow: 0 0 10px green;
 }
-
-.ways .list {
+.main .ways .lists {
   padding: 24px;
   font-size: 14px;
   flex-grow: 1;
   display: block;
   justify-content: space-between;
-  box-shadow: 0 0 10px green;
 }
-
-.ways .list p {
-  margin-bottom: 30px;
+.main .ways .lists p {
+  margin-top: -4px;
+  margin-bottom: 32px;
 }
-
-.ways .list ul {
+.main .ways .lists ul {
   padding-left: 18px;
 }
-
-.ways .list ul li {
-  margin-top: 18px;
+.main .ways .lists ul li {
+  margin-top: 20px;
 }
 
 /* style */
-
 body {
   background-color: #673399;
 }
 
+/* header */
 .header {
   color: #eee;
-  margin-bottom: 100px;
 }
-
 .header .title {
   font-size: 40px;
 }
-
 .header .title strong {
   font-weight: lighter;
   box-shadow: inset 0px -0.5em 0 0 orangered;
 }
-
 .header .text {
   color: #bd8fe8;
 }
 
+/* center line in header */
 .header .text::before {
   content: "";
   display: block;
@@ -138,43 +159,47 @@ body {
   left: 0;
   width: 100px;
   height: 2px;
-  box-shadow: 0 0 10px green;
 }
 
-.ways {
+/* main */
+.main .ways {
   background-color: #fff;
 }
-
-.ways .img {
+.main .ways .img {
   color: #fff;
 }
-.ways .list {
-  background-color: white;
+.main .ways .img p {
+  font-size: 30px;
 }
 
-.ways .img img::before {
+/* opacity settings */
+.main .ways .img::before {
   content: "";
-  position: absolute;
   display: block;
+  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
   height: 100%;
   background-color: #673399;
-  opacity: 0.4;
+  opacity: 0.5;
 }
-.ways .img p {
-  font-size: 30px;
+
+.main .ways .lists {
+  background-color: white;
 }
-.ways .list p {
+.main .ways .lists p {
   font-size: 18px;
   font-weight: bold;
   color: #673399;
-  box-shadow: 0 0 10px green;
+}
+.main .ways .lists li {
+  font-size: 14px;
 }
 
-.ways .list li::before {
+/* list bullet style setting */
+.main .ways .lists li::before {
   content: "";
   display: inline-block;
   background-color: #bd8fe8;
