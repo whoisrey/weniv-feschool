@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Documnet</title>
+  <style>
+    .txt-hide {
+      position: absolute;
+      clip: rect(0 0 0 0);
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+    }
+
+    .labl-hold {
+      display: inline-block;
+      position: relative;
+
+      margin: 20px 0;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .labl-hold::before {
+      content: '';
+      display: inline-block;
+      width: 22px;
+      height: 22px;
+      margin-right: 10px;
+      vertical-align: -5px;
+      border: 1px solid black;
+    }
+
+    .inp-hold:focus-visible+.labl-hold::before {
+      outline: 2px solid black;
+      outline-offset: 5px;
+
+    }
+
+    .labl-hold::after {
+      position: absolute;
+      top: 2px;
+      left: 22px;
+      content: '';
+      display: inline-block;
+      width: 22px;
+      height: 22px;
+      background: url(/images/checkmark.png) 0 0 / 22px no-repeat;
+      transition: 0.3s ease;
+      opacity: 0;
+    }
+
+    .inp-hold:checked+.labl-hold::after {
+      left: 1px;
+      opacity: 1;
+    }
+  </style>
+
+</head>
+<body>
+  <input type="checkbox" id="inpHold" class="inp-hold txt-hide">
+  <label for="inpHold" class="labl-hold">로그인 상태 유지</label>
+  <!-- class 이름짓기(재현 강사님) 형태-의미-상태 -->
+</body>
+</html>
