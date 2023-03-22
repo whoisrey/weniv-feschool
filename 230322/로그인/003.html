@@ -5,49 +5,60 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>로그인</title>
-  <link rel="stylesheet" href="003.css">
+
+  <link rel="stylesheet" href="/로그인/normalize.css">
+  <link rel="stylesheet" href="/로그인/004.css">
 </head>
 <body>
   <div class="wrapper">
-    <header>
-      <h1 class="a11y-hidden">로그인 페이지</h1>
-      <p>로그인 또는 회원가입</p>
+
+    <header class="modal-header">
+      <h1 class="a11y-hidden">The Page about Login and Join</h1>
+      <p class="modal-title">로그인 또는 회원가입</p>
+      <!-- <button class="modal-close">...</button> -->
     </header>
-    <main>
 
+    <main class="modal-main">
       <section class="input">
-        <h2 class="a11y-hidden">로그인 모듈</h2>
-        <p>위니브에서 여러분의 궁금증을 해결하세요!</p>
-        <div class="input-login">
-          <input id="id" type="text" class="id" placeholder="아이디">
-          <label for="id" class="label-id"></label>
-          <input id="pw" type="password" class="pw" placeholder="비밀번호">
-          <label for="pw" class="label-pw"></label>
+        <h2 class="a11y-hidden">Input for Login</h2>
+        <p>위니브에서 여러분의 궁금증을 해결하세요! :)</p>
 
-          <input id="box" type="checkbox" class="box-login">
-          <label for="box" class="box-label">로그인 상태 유지</label>
+        <form class="input-login">
+          <input id="id-box" class="a11y-hidden" type="text" placeholder="아이디" required>
+          <label for="id-box">아이디</label>
+
+          <input id="pw-box" class="a11y-hidden" type="pw" placeholder="비밀번호" required>
+          <label for="pw-box">비밀번호</label>
+
+          <fieldset class="input-login-check">
+            <input id="check-box" class="input-login-check-box" type="checkbox">
+            <label for="check-box">로그인 상태 유지</label>
+          </fieldset>
+
 
           <button class="btn-login">로그인</button>
-          <div class="join-find">
-            <a class="join">회원가입</a>
-            <span>|</span>
-            <a ckass="find">아이디/비밀번호 찾기</a>
-          </div>
-          <div class="and">
-            <span>또는</span>
+
+          <div class="input-find">
+            <a>회원가입</a>
+            <a>아이디/비밀번호 찾기</a>
           </div>
 
+        </form>
+
+      </section>
+
+      <section class="input-social">
+        <p class="">또는
+
+        </p>
+        <div class="input-social-pages">
+          <button>구글 계정으로 로그인</button>
+          <button>페이스북 계정으로 로그인</button>
+          <button>네이버 계정으로 로그인</button>
+          <button>카카오톡 계정으로 로그인</button>
         </div>
-      </section>
 
-      <section class="social">
-        <h2 class="a11y-hidden">계정 연동</h2>
-        <button>구글 계정으로 로그인</button>
-        <button>페이스북 계정으로 로그인</button>
-        <button>네이버 계정으로 로그인</button>
-        <button>카카오톡 계정으로 로그인</button>
       </section>
-
     </main>
   </div>
 
