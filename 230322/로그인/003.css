@@ -10,13 +10,38 @@
   position: absolute;
 }
 
-/* aligned center */
+/* reset */
+h1,
+h2,
+p,
+input,
+label {
+  padding: 0;
+  margin: 0;
+}
+/* font */
+body {
+  font-family: "SpoqaHanSansNeo-Regular";
+}
+@font-face {
+  font-family: "SpoqaHanSansNeo-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SpoqaHanSansNeo-Regular.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 
+/* aligned center */
+body {
+  background-color: #767676;
+}
 .wrapper {
   max-width: 520px;
   margin: 0 auto;
-
-  box-shadow: 0 0 10px red;
+  border: 1px solid #c4c4c4;
+  border-radius: 10px;
+  background-color: #ffffff;
+  /* box-shadow: 0 0 10px red; */
 }
 
 input,
@@ -24,39 +49,148 @@ button,
 fieldset {
   background: none;
   border: none;
-}
-
-header {
-  box-shadow: 0 0 10px blue;
-}
-
-main {
-  box-shadow: 0 0 10px green;
+  padding: 0;
+  margin: 0;
+  color: inherit;
 }
 
 /* layout */
-.input-login {
-  display: flex;
-  flex-direction: column;
-}
-
-.input-social-pages {
-  display: flex;
-  flex-direction: column;
-}
-
-input,
-label {
-  display: inline-block;
-}
-
-/* style */
 .modal-header {
-  padding: 20px 188px;
+  padding: 20px 144px;
   text-align: center;
   border-bottom: 1px solid #c4c4c4;
 }
-
 .modal-main {
   padding: 24px;
+}
+/* input */
+.input p {
+  font-size: 20px;
+}
+/* input for login */
+.input-login {
+  display: flex;
+  flex-direction: column;
+  margin-top: 24px;
+  margin-bottom: 30px;
+}
+.input-login input {
+  padding: 15px;
+  border: 1px solid #c4c4c4;
+  border-radius: 5px;
+}
+.input-login .input-login-id {
+  margin-bottom: 34px;
+}
+.input-login .input-login-pw {
+  margin-bottom: 17px;
+}
+.input-login input:placeholder-shown {
+  border: 1px solid red;
+}
+
+/* checkbox!! */
+.input-login-check {
+  display: flex;
+  padding: 0;
+  gap: 8px;
+  align-items: center;
+}
+.input-login-check-box,
+.input-login-check-label {
+  margin: 0;
+}
+.input-login-check-label::before {
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 2px solid #c4c4c4;
+}
+.input-login-check-box:focus + .input-login-check-label:before {
+  background-color: #2f80ed;
+  border: none;
+}
+
+/* log-in button & find id/pw */
+.input-btn {
+  padding: 14px 211px;
+  margin: 20px 0;
+  color: #fff;
+  background-color: #2f80ed;
+  border-radius: 5px;
+}
+.input-find {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  text-align: center;
+  font-size: 14px;
+  color: #767676;
+  position: relative;
+}
+
+/* social */
+.social .social-pages {
+  display: flex;
+  flex-direction: column;
+  color: #c4c4c4;
+}
+.social p {
+  text-align: center;
+  font-size: 14px;
+  position: relative;
+  margin-bottom: 20px;
+}
+.social p:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 210px;
+  height: 1px;
+  background-color: #c4c4c4;
+}
+.social p:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 210px;
+  height: 1px;
+  background-color: #c4c4c4;
+}
+
+/* 4 kinds of social-pages */
+.social .social-pages {
+  gap: 10px;
+}
+.social .social-pages button {
+  padding: 15px 120px 15px 150px;
+  background-repeat: no-repeat;
+}
+.social .social-pages button:first-child {
+  border: 1px solid #c4c4c4;
+  border-radius: 5px;
+  background-image: url(/img/google.png);
+  background-position: 10px 10px;
+}
+.social .social-pages button:nth-child(2) {
+  border: 1px solid #2d9cdb;
+  border-radius: 5px;
+  background-image: url(/img/facebook.png);
+  background-position: 16px 10px;
+}
+.social .social-pages button:nth-child(3) {
+  border: 1px solid #00bf18;
+  border-radius: 5px;
+  background-image: url(/img/naver.png);
+  background-position: 13px 10px;
+}
+.social .social-pages button:last-child {
+  border: 1px solid #f2c94c;
+  border-radius: 5px;
+  background-image: url(/img/kakao.png);
+  background-position: 12px 10px;
 }
