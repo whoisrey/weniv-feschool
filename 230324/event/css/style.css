@@ -315,9 +315,7 @@ button {
 }
 /* //something for both cards (such as footer, list, and whatever) */
 
-@media (max-width: 1080px) {
-}
-
+/* reponsive web design */
 @media (max-width: 900px) {
   .first-header,
   .second-header,
@@ -334,3 +332,18 @@ button {
     display: block;
   }
 }
+@media (max-width: 576px) {
+  .first-header,
+  .second-header {
+    display: block;
+  }
+  .second-header h1 {
+    margin-bottom: 24px;
+  }
+  .second-header p::before {
+    width: 0;
+    height: 0;
+    margin: 0;
+  }
+}
+/* //reponsive web design */
