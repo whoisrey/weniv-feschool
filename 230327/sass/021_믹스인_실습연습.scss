@@ -1,0 +1,34 @@
+// @mixin container($display, $justify-content, $align-items) {
+//   display: $display;
+//   justify-content: $justify-content;
+//   align-items: $align-items;
+// }
+
+@mixin container($value) {
+  display: flex;
+  @if ($value == "card") {
+    justify-content: center;
+    align-items: center;
+  }
+  @if ($value == "product") {
+    justify-content: center;
+    align-items: center;
+  }
+}
+@mixin item($length, $radius) {
+  width: $length;
+  height: $length;
+  border-radius: $radius;
+}
+.card {
+  @include container("card");
+}
+.product {
+  @include container("product");
+}
+.card-item {
+  @include item(100px, 10%);
+}
+.product-item {
+  @include item(200px, 20%);
+}

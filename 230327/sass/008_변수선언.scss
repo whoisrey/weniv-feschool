@@ -1,0 +1,20 @@
+$rey1: #000;
+$rey2: #0ff;
+// 한글 변수를 권장하지 않습니다.
+// 고유 명사 같은 경우는 한글 변수를 사용하기도 합니다.
+$양래: #f00;
+$큰글자: 34px;
+
+.one {
+  font-size: $큰글자;
+  color: $rey2;
+}
+
+.two {
+  background-color: $rey2;
+  color: $rey1;
+}
+
+.three {
+  color: $양래;
+}
