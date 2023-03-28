@@ -1,2 +1,4 @@
-# Frontend School (2/28~)
-![withLeche's GitHub stats](https://github-readme-stats.vercel.app/api?username=withLeche&theme=tokyonight&show_icons=true)
+`Frontend School (2/28~)`
+##
+<img src="https://img.shields.io/badge/LikeLion-orange?style=flat-square&logo=frontend mentor&logoColor=white"/> <img src="https://img.shields.io/badge/Weniv-gray?style=flat-square&logo=frontend mentor&logoColor=white"/> <img src="https://img.shields.io/badge/VEAMCAMP-purple?style=flat-square&logo=frontend mentor&logoColor=white"/> 
+
