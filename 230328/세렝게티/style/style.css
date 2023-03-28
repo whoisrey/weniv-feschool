@@ -1,0 +1,33 @@
+body {
+  color: #bbb;
+}
+article {
+  display: flex;
+  flex-direction: column;
+}
+.container {
+  border: 2px solid #bbb;
+  border-radius: 10px;
+  /* padding: 24px; */
+  padding: 0;
+}
+.start {
+  background-color: seagreen;
+}
+.question {
+  display: none;
+  background-color: brown;
+}
+
+.result {
+  display: none;
+  color: brown;
+  background-color: burlywood;
+}
+
+#img {
+  width: 300px;
+  height: 300px;
+  border: 2px double brown;
+  margin: 0 auto;
+}
