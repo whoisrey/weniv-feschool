@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+
+</head>
+<body>
+  <script>
+    const x = 3;
+    const y = 7;
+
+    console.log(x > y);
+    console.log(x >= y);
+    console.log(x < y);
+    console.log(x <= y);
+    console.log(x == y); // 변수의 type을 보지 않습니다.
+    console.log(x === y);
+    // 권장 // 변수의 type을 확인합니다. (매우 중요)
+    // 1. 견고한 코딩
+    // 2. 성능상의 이점
+
+    // 1 == '1' true;
+    // 1 === '1' false;
+
+    console.log(x != y);
+    console.log(x !== y);
+
+    // 3 != '3' false;
+    // 3 !== '3' true;
+
+  </script>
+</body>
+</html>
