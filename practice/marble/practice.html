@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Magical Marbles</title>
+  <style>
+    :root {
+      --main-bgColor: teal;
+    }
+
+    h1,
+    p,
+    div {
+      padding: 0;
+      margin: 0;
+    }
+
+    .wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      max-width: 300px;
+      padding: 20px;
+      margin: 0 auto;
+      text-align: center;
+      border: 20px double black;
+      border-radius: 15px;
+      background: linear-gradient(10deg, #bbb, white)
+    }
+
+    .picker,
+    .name {
+      margin-bottom: 20px;
+    }
+
+    .name {
+      font-size: 24px;
+      color: black;
+    }
+
+    .marble {
+      margin: 0 auto;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      background: linear-gradient(76deg, yellow, var(--main-bgColor));
+    }
+
+    .hands {
+      font-size: 72px;
+    }
+  </style>
+</head>
+<body>
+  <section class="wrapper">
+    <article class="picker">
+      <label for="bg">color: </label>
+      <input type="color" id="bg" class="inp-picker" data-id="bgColor">
+    </article>
+    <main class="contents">
+      <h1 class="name">Magical Marble</h1>
+      <div class="marble"></div>
+      <p class="hands">🫴🏽</p>
+    </main>
+  </section>
+  <!-- JavaScript -->
+  <script>
+    const inpPicker = document.querySelectorAll('.inp-picker');
+    inpPicker.forEach((item) => {
+      item.addEventListener('input', () => {
+        const name = '--main-' + item.dataset.id;
+        // const name = `--main-${item.dataset.id}`;
+        const root = document.querySelector(':root')
+        root.style.setProperty(name, item.value);
+      })
+    })
+  </script>
+</body>
+</html>
