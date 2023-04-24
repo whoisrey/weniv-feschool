@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="">
+</head>
+<body>
+
+  <!-- JavaScript -->
+  <script>
+    'user strict';
+
+    class UserStorage {
+      searchUser() {
+        const xhr = new XMLHttpRequest();
+        xhr.open('GET', 'users.json'); // 초기화 설정
+        xhr.onreadystatechange = () => {
+          if (xhr.readyState === 4 && xhr.status === 200) {
+            const result = JSON.parse(xhr.responseText)
+            console.log(result);
+          };
+        }
+
+        xhr.send();
+      }
+      sayHi() {
+
+      }
+    }
+
+    const userStorage = new UserStorage(); // 실행
+    userStorage.searchUser();
+
+  </script>
+</body>
+</html>
