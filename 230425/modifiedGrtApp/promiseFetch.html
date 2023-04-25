@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="">
+</head>
+<body>
+
+  <!-- JavaScript -->
+  <script>
+    class UserStorage {
+
+      // 유저가 등록되었는지 확인
+      searchUser(userName, password) {
+
+        return fetch('users.json')
+          .then(response => {
+            if (!response.ok) {
+              throw new Error('Failed to fetch users');
+            }
+            return response.json();
+          })
+          .then(data => {
+            const result = data.user.find(item => item.userName === userName && item.password === password);
+            if (result) {
+              return Promise.resolve(userName);
+            } else {
+              return Promise.reject('user not found');
+            }
+          });
+      }
+
+      // 등록된 유저에 따른 인사말을 출력
+      sayHi(user) {
+
+        return fetch('greetings.json')
+          .then(response => {
+            if (!response.ok) {
+              throw new Error('Failed to fetch greetings');
+            }
+            return response.json();
+          })
+          .then(data => {
+            const result = data.greetings.find(item => item.userName === user);
+            if (result) {
+              return Promise.resolve({
+                name: result.userName,
+                greetings: result.greetings
+              });
+            } else {
+              return Promise.reject('no greetings');
+            }
+          });
+      }
+    }
+
+    const userStorage = new UserStorage();
+
+    const userName = prompt('이름을 입력하세요');
+    const password = prompt('비밀번호를 입력하세요');
+
+    userStorage.searchUser(userName, password)
+      .then(result => userStorage.sayHi(result))
+      .then(result => {
+        alert(`당신에게 인사합니다! ${result.name}님 ${result.greetings}`);
+      })
+      .catch(error => console.error(error));
+  </script>
+</body>
+</html>
