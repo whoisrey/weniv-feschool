@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+  <title>위니브 샵</title>
+</head>
+
+<body>
+
+  <p>컴포넌트화 실습</p>
+  <div id="root"></div>
+
+  <script type="text/babel">
+    function Card({ title, price }) {
+      return (
+        <div className="card">
+          <h2>{title}</h2>
+          <p>{price}</p>
+        </div>
+      )
+    }
+    const data = [
+      {
+        title: '버그를 Java라 버그잡는 개리씨 키링 개발자키링 금속키링',
+        price: 12500,
+      },
+      {
+        title: '우당탕탕 라이캣의 실험실 스티커 팩',
+        price: 3500,
+      },
+      {
+        title: '딥러닝 개발자 무릎 담요',
+        price: 17500,
+      },
+      {
+        title: '네 개발잡니다 개발자키링 금속키링',
+        price: 13500,
+      },
+      {
+        title: 'Hack Your Life 개발자 노트북 파우치',
+        price: 36000,
+      },
+      {
+        title: '[NEW] 위니브 개발자, 캐릭터 스티커팩 2종',
+        price: 5500,
+      },
+      {
+        title: '제주코딩베이스캠프 코딩 연습장 세트',
+        price: 8000,
+      }
+
+    ];
+
+    const App = () => {
+      return (
+        <div>
+          {data.map((item, index) => (
+            <Card key={index} title={item.title} price={item.price} />
+          ))}
+        </div>
+      );
+    };
+    ReactDOM.render(<App />, document.getElementById('root'));
+  </script>
+</body>
+
+</html>
