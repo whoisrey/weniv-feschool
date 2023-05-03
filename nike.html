@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>heart line</title>
+  <style>
+    path {
+      fill: none;
+      stroke: teal;
+      stroke-width: 10px;
+      stroke-linecap: round;
+      stroke-dasharray: 849 849;
+      stroke-dashoffset: 0;
+      animation: line 3s infinite;
+    }
+
+    @keyframes line {
+      from {
+        stroke-dashoffset: 849;
+      }
+
+      to {
+        stroke-dashoffset: 0;
+      }
+    }
+
+    @keyframes line {
+      from {
+        stroke-dashoffset: 2468;
+      }
+
+      to {
+        stroke-dashoffset: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <svg width="486" height="295" viewBox="0 0 486 295" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path id="path1"
+      d="M146.639 190.933C16.2749 249.277 81.2727 166.623 130.067 118.004C107.972 163.585 136.512 153.166 353.785 85.446C571.058 17.726 287.498 118.004 146.639 190.933Z"
+      stroke="black" />
+  </svg>
+  <script>
+    const path1 = document.querySelector('#path1');
+  </script>
+</body>
+</html>
