@@ -1,0 +1,38 @@
+.container {
+  border: 5px solid black;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.item {
+  border: 5px solid #f6866a;
+  height: 100px;
+  padding: 20px;
+  font-size: 32px;
+}
+
+.item:nth-child(1) {
+  font-family: "Anek Malayalam", sans-serif;
+}
+
+.item:nth-child(2) {
+  font-family: "Fascinate", cursive;
+}
+
+.item:nth-child(3) {
+  font-family: "Kdam Thmor Pro", sans-serif;
+}
+
+.item:nth-child(4) {
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+.item:nth-child(5) {
+  font-family: "Open Sans", sans-serif;
+}
+
+.item:nth-child(6) {
+  font-family: "Roboto", sans-serif;
+}
