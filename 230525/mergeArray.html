@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+</head>
+<body>
+
+  <!-- JavaScript -->
+  <script>
+    // 정렬된 두 개의 배열을 병합하기. 
+    // 배열의 원소는 숫자로 한정됩니다.
+    // [] + []
+    const myArr1 = [1, 3, 5, 7, 9];
+    const myArr2 = [0, 2, 8, 10];
+    function mergeArray(arr1, arr2) {
+
+      if (arr1.length === 0) {
+        return '병합을 할 배열이 없습니다.'
+      }
+      if (arr2.length === 0) {
+        return '병합을 할 배열이 없습니다.'
+      }
+      const mergedArray = [];
+
+      let arr1FirstEl = arr1[0];
+      let arr2FirstEl = arr2[0];
+      let i = 1;
+      let j = 1;
+
+      // arrFirstEl, arr2FirstEl 두 값이 모두 falsy를 반환할 때까지 반복합니다.
+      while (arrFirstEl !== undefined || arr2FirstEl !== undefined) {
+        if (arr2FirstEl === undefined || arr1FirstEl < arr2FirstEl) {
+          // mergeArray = [arr1FirstEl, arr2FirstEl]
+          mergedArray.push(arr1FirstEl)
+          arr1FirstEl = arr1[i];
+          i++;
+        } else {
+          // mergeArray = [arr2FirstEl, arr1FirstEl]
+          mergedArray.push(arr2FirstEl)
+          arr2FirstEl = arr2[j]
+          j++;
+        }
+      }
+      return mergedArray
+    }
+
+    // function mergeArray(arr1, arr2) {
+    //   let mergedArray = [];
+    //   let i = 0;
+    //   let j = 0;
+
+    //   while (i < arr1.length && j < arr2.length) {
+    //     if (arr1[i] < arr2[j]) {
+    //       mergedArray.push(arr1[i]);
+    //       i++;
+    //     } else {
+    //       mergedArray.push(arr2[j]);
+    //       j++;
+    //     }
+    //   }
+
+    //   while (i < arr1.length) {
+    //     mergedArray.push(arr1[i]);
+    //     i++;
+    //   }
+
+    //   while (j < arr2.length) {
+    //     mergedArray.push(arr2[j]);
+    //     j++;
+    //   }
+
+    //   return mergedArray;
+    // }
+    
+    // chatGPT 풀이
+    // function mergeArray(arr1, arr2) {
+    //   if (arr1.length === 0) {
+    //     return arr2;
+    //   }
+
+    //   if (arr2.length === 0) {
+    //     return arr1;
+    //   }
+
+    //   let mergedArray = [];
+
+    //   if (arr1[0] < arr2[0]) {
+    //     mergedArray.push(arr1[0]);
+    //     mergedArray = mergedArray.concat(mergeArray(arr1.slice(1), arr2));
+    //   } else {
+    //     mergedArray.push(arr2[0]);
+    //     mergedArray = mergedArray.concat(mergeArray(arr1, arr2.slice(1)));
+    //   }
+
+    //   return mergedArray;
+    // }
+
+  </script>
+</body>
+</html>
