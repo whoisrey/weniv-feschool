@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  div {
+    color: tomato;
+  }
+</style>
+<!-- <link rel="stylesheet" href="./test.css" media='(orientation:portrait)'> -->
+<body>
+    <!-- <div>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, nisi dolores id ex inventore sapiente eum, illo porro minus similique non vitae, perferendis maiores distinctio. Quae sed quam id necessitatibus!
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam incidunt quas molestiae illum nihil fugit quis at dolorum. Nulla doloribus, quo maxime nobis voluptatum deserunt ea fugit quae nostrum dolores?
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui omnis consectetur ipsam nemo aspernatur aperiam nisi quaerat eligendi praesentium atque, voluptate tempore voluptatem modi soluta accusamus reiciendis quidem eaque minima!
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio culpa aut repellendus atque fugiat numquam eligendi veniam delectus omnis possimus itaque sequi, corporis temporibus maiores tenetur, esse saepe aliquid unde.
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam sit similique soluta odio labore expedita rerum corrupti quo, deleniti molestias dolor, nulla fugiat, necessitatibus alias dolores provident nemo quibusdam consequuntur.
+    Nihil iure quisquam quaerat nostrum ipsum dolor harum pariatur tempora, doloremque vel. Officia voluptates corrupti in veritatis saepe unde deleniti recusandae, harum reprehenderit ullam, velit obcaecati enim odit aperiam dicta?
+    Totam incidunt suscipit cumque laboriosam eveniet laudantium aliquid modi et reprehenderit enim sequi itaque omnis, sit architecto exercitationem aliquam asperiores nemo possimus atque nostrum animi velit? Ipsa doloribus quas saepe?
+    Temporibus eius sequi tempore ad aliquam enim eveniet nam est mollitia quidem dignissimos cum, consequuntur facilis impedit praesentium vitae molestiae in ducimus tempora sunt distinctio libero optio sit! Quibusdam, corporis.
+    Aut, quia, voluptates earum ut tempore consequuntur maiores eius pariatur ducimus laborum amet voluptatum inventore neque id dolorem? Asperiores, in! Atque at ipsum voluptas consectetur minima debitis necessitatibus mollitia qui.
+  </div> -->
+
+
+  <h1>hello lions!</h1>
+
+
+  <script>
+    console.log('first line script');
+  </script>
+
+  <script src='test1.js'></script>
+  <!-- <script async src='test1.js'>비동기적 실행</script> -->
+  <script>
+    console.log('second line script');
+  </script>
+
+  <script async src='test2.js'></script>
+  <!-- <script defer src='test2.js'>순서가 보장되는 경우에는 defer</script> -->
+
+
+  <!-- 돔을 사용하고 
+    순차적으로 실행되야 한다면 defer 
+    (병렬로 다운하긴 하지만 실행은 선언 순서대로 )
+
+    돔을 사용하지 않고 
+    실행 순서에 상관없이 스크립트를 병렬로 빠르게 로드하고 싶다면 async 
+    (Async 는 궁극적으로 코드를 실행하는데 빠르게 모든 준비를 마치기 위해서 만들어 졌습니다.) -->
+  <script>
+    console.log('third line script');
+  </script>
+
+</body>
+</html>
