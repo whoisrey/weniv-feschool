@@ -1,1 +1,1 @@
-## Bootstrap 복습
+## Bootstrap
