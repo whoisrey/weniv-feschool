@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>float 활용 답안</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        color: #eee;
+      }
+      .one {
+        border: 10px solid #466fa6;
+      }
+      header {
+        background-color: #96c9f2;
+        height: 100px;
+      }
+      section {
+        background-color: #485373;
+        float: left;
+        width: 50%;
+        height: 400px;
+      }
+      aside {
+        background-color: #c7f544;
+        height: 400px;
+        float: right;
+        width: 50%;
+      }
+      footer {
+        background-color: #ff7769;
+        height: 100px;
+        clear: both;
+      }
+      .clear-fix::after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="one">header</header>
+    <section class="one">section > article</section>
+    <aside class="one">aside</aside>
+    <footer class="one">footer</footer>
+  </body>
+</html>

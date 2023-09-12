@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>float사용</title>
+    <style>
+      * {
+        color: #fff;
+        border: 5px solid #466fa6;
+        overflow: hidden;
+        background-color: #f8f8f5;
+        width: 960px;
+        height: 878px;
+        box-sizing: border-box;
+        margin: 0 auto;
+        text-align: center;
+      }
+      header {
+        width: 960px;
+        height: 100px;
+        background-color: #96c9f2;
+      }
+      section {
+        width: 480px;
+        height: 600px;
+        background-color: #485373;
+        float: left;
+      }
+      aside {
+        width: 470px;
+        height: 600px;
+        background-color: #c7f544;
+        float: right;
+      }
+      footer {
+        width: 960px;
+        height: 178px;
+        background-color: #ff7769;
+      }
+    </style>
+  </head>
+  <body>
+    <header>header</header>
+    <section>section > article</section>
+    <aside>aside</aside>
+    <footer>footer</footer>
+  </body>
+</html>
