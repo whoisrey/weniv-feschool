@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>레이아웃 (230312)</title>
+    <style>
+      header,
+      section,
+      aside,
+      footer {
+        border: 10px solid #4f6fa2;
+      }
+      .wrap {
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        grid-template-rows: 1fr 3fr 1fr;
+        grid-template-areas:
+          "a a"
+          "b c"
+          "d d";
+        color: #eee;
+        align-self: center;
+        justify-self: center;
+      }
+
+      header {
+        background-color: #a2c8ee;
+        grid-area: a;
+        height: 50px;
+      }
+      section {
+        background-color: #4a5470;
+        grid-area: b;
+      }
+      aside {
+        color: black;
+        background-color: #d0f464;
+        grid-area: c;
+      }
+      footer {
+        background-color: #ee7e6f;
+        grid-area: d;
+        height: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <header>header</header>
+      <section>section > article</section>
+      <aside>aside</aside>
+      <footer>footer</footer>
+    </div>
+  </body>
+</html>
