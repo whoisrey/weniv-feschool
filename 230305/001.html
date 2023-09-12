@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>예제</title>
+    <style>
+      .wrap1,
+      .wrap2 {
+        display: flex;
+        gap: 20px;
+        margin-bottom: 20px;
+      }
+      .wrap1 div,
+      .wrap2 div {
+        width: 200px;
+        height: 200px;
+        padding: 20px;
+        color: #8d4bf6;
+        font-size: 20px;
+        font-weight: bold;
+        box-sizing: border-box;
+        border: 10px dashed #8d4bf6;
+        background-color: skyblue;
+        background-repeat: no-repeat;
+      }
+
+      [class^="box"] {
+        background-image: url(https://github.com/stronger-deer/myBlog/blob/main/img/main-visual.jpg?raw=true);
+      }
+
+      .wrap1 .box1 {
+        background-clip: border-box;
+      }
+      .wrap1 .box2 {
+        background-clip: padding-box;
+      }
+      .wrap1 .box3 {
+        background-clip: content-box;
+      }
+
+      .wrap2 .box1 {
+        background-origin: border-box;
+      }
+      .wrap2 .box2 {
+        background-origin: padding-box;
+      }
+      .wrap2 .box3 {
+        background-origin: content-box;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap1">
+      <div>default</div>
+      <div class="box1">border-box</div>
+      <div class="box2">padding-box</div>
+      <div class="box3">content-box</div>
+    </div>
+    <div class="wrap2">
+      <div>default</div>
+      <div class="box1">border-box</div>
+      <div class="box2">padding-box</div>
+      <div class="box3">content-box</div>
+    </div>
+  </body>
+</html>
