@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>레이아웃(flex)</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        color: #eee;
+      }
+      .one {
+        border: 10px solid #466fa6;
+      }
+      .section {
+        display: flex;
+      }
+      .section section,
+      aside {
+        flex: 1 1 100px;
+        height: 400px;
+      }
+      header {
+        background-color: #96c9f2;
+        height: 100px;
+      }
+      section {
+        background-color: #485373;
+      }
+      aside {
+        background-color: #c7f544;
+      }
+      footer {
+        background-color: #ff7769;
+        height: 100px;
+        clear: both;
+      }
+      header,
+      section,
+      aside,
+      footer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-weight: bold;
+      }
+      /* .clear-fix::after {
+        content: "";
+        display: block;
+        clear: both;
+      } */
+    </style>
+  </head>
+  <body>
+    <header class="one">header</header>
+    <div class="section">
+      <section class="one">section > article</section>
+      <aside class="one">aside</aside>
+    </div>
+    <footer class="one">footer</footer>
+  </body>
+</html>
