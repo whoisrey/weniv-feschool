@@ -1,0 +1,28 @@
+h1,
+p {
+  margin: initial;
+  padding: initial;
+}
+body {
+  background-image: url(images/bg.png);
+}
+img {
+  vertical-align: top;
+}
+.wrap {
+  color: #eee;
+  width: 300px;
+  margin: auto;
+}
+.text {
+  background-color: #8b5a36;
+  border-radius: 0 0 10% 10%;
+  box-shadow: 0px 10px #452811;
+  font-size: 17px;
+}
+.text h1 {
+  padding: 12px 18px;
+}
+.text p {
+  padding: 0px 18px 32px 18px;
+}
